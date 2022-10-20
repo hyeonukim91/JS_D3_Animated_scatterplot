@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+text {
+  font-size: 24px;
+  font-family: 'Share Tech', sans-serif;
+}
+
+h1 {
+  color: #1C6758;
+}
+
+#title {
+  background-color: #EEF2E6;
+}
