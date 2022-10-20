@@ -19,9 +19,9 @@
 
     const icon = (d) => {
         if (d.species == 'setosa')
-          return 'meat.svg'
+          return 'carrot.svg'
         else if (d.species == 'versicolor')
-          return 'fish.svg'
+          return 'lemon.svg'
         else return 'avocado.svg'
       };
 
