@@ -6,11 +6,6 @@ const csvUrl = [
   'iris.csv', // File name
 ].join('');
 
-
-////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////
-
 const parseRow = (d) => {
   d.sepal_length = +d.sepal_length;
   d.sepal_width = +d.sepal_width;
@@ -19,10 +14,8 @@ const parseRow = (d) => {
   return d;
 };
 
-const width = 800;
-const height = 600 ;
-
-
+const width = 700;
+const height = 500 ;
 
 // const color = (d) => {
 //   if (d.species == 'setosa')
@@ -32,7 +25,7 @@ const height = 600 ;
 //   else return '#874C62'
 // }
 
-const svg = d3.select('body')
+const svg = d3.select('.plot')
   .append('svg')
   .attr('width', width)
   .attr('height', height)

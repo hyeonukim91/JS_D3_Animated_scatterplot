@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+text {
+  font-size: 24px;
+  font-family: 'Share Tech', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #1C6758;
+  text-align: center;
+}
+
+.title {
+  background-color: #EEF2E6;
+  margin: auto;
+  padding: 1;
+}
+
+.plot {
+  width: 700px;
+  height: 500px;
+  margin: auto;
+  padding: 1em;
+}

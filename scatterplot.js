@@ -5,8 +5,7 @@
   let xValue;
   let yValue;
   let margin;
-
-
+  
   const my = (selection) => {
 
     const x = d3.scaleLinear()
@@ -19,10 +18,10 @@
 
     const icon = (d) => {
         if (d.species == 'setosa')
-          return 'carrot.svg'
+          return 'images/carrot.svg'
         else if (d.species == 'versicolor')
-          return 'lemon.svg'
-        else return 'avocado.svg'
+          return 'images/lemon.svg'
+        else return 'images/avocado.svg'
       };
 
     const marks = data.map((d) => ({
