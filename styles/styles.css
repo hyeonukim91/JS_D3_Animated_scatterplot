@@ -4,25 +4,39 @@ body {
 }
 
 text {
-  font-size: 24px;
-  font-family: 'Share Tech', sans-serif;
-  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  color: #067A46;
 }
 
 h1 {
-  color: #1C6758;
+  color: white;
   text-align: center;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .title {
-  background-color: #EEF2E6;
+  width: 650px;
+  background-color: #067A46;
+  padding: 20px;
   margin: auto;
-  padding: 1;
+  margin-top: 20px;
 }
 
-.plot {
-  width: 700px;
-  height: 500px;
+.plot{
+  width: 650px;
+  height: 450px;
   margin: auto;
-  padding: 1em;
+  background-color: #F8FFDB;
+  padding: 20px;
+}
+
+.x-axis{
+  color: #067A46;
+}
+
+.y-axis{
+  color: #067A46;
 }

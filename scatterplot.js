@@ -5,11 +5,11 @@
   let xValue;
   let yValue;
   let margin;
-  
+
   const my = (selection) => {
 
     const x = d3.scaleLinear()
-      .domain([0,8])
+      .domain(d3.extent(data, xValue))
       .range([margin.left, width - margin.right]);
 
     const y = d3.scaleLinear()
@@ -40,22 +40,6 @@
       svg.attr("xlink:href", (d) => d.icon);
     }
 
-    // const positionCircles = (circles) => {
-    //   circles.attr('cx', (d) => d.x).attr('cy', (d) => d.y);
-    // };
-
-    // const initializeRadius = (circles) => {
-    //   circles.attr('r', 0);
-    // };
-    // const growRadius = (enter) => {
-    //   enter.transition(t).attr('r', radius);
-    // };
-    //
-    // const colorMark = (circles) => {
-    //   circles.attr('fill', (d) => d.color);
-    // };
-
-
     const markg = selection
       .selectAll('g')
       .data(marks)
@@ -63,46 +47,40 @@
       .join(
         (enter) =>
         enter.append('g')
-        .call(positionG)
-        .append('svg:image')
-        // .attr('x', -10)
-        .attr('y', -20)
-        .attr('width', 20)
-        .attr('height', 20)
-        // .attr('transform', (d) => `rotate(30)`)
-        .call(iconSvg),
+          .call(positionG)
+          .append('svg:image')
+          .attr('y', -20)
+          .attr('width', 20)
+          .attr('height', 20)
+          .call(iconSvg),
         (update) =>
         update.call((update) =>
         update.transition(t)
         .delay((d,i) => i*10)
         .call(positionG)
-      ),//update
-          (exit) => exit.remove()
+      ),
+        (exit) => exit.remove()
       )//join
-
-
-
-
-
 
     selection
       .selectAll('.y-axis')
-      .data([null])
-      .join('g')
-      .attr('class', 'y-axis')
-      .attr('transform', `translate(${margin.left},0)`)
-      .call(d3.axisLeft(y));
+       .data([null])
+       .join('g')
+        .attr('class', 'y-axis')
+        .attr('transform', `translate(${margin.left},0)`)
+       .call(d3.axisLeft(y));
 
     selection
       .selectAll('.x-axis')
-      .data([null])
-      .join('g')
-      .attr('class', 'x-axis')
-      .attr(
-        'transform',
-        `translate(0,${height - margin.bottom})`)
-      .call(d3.axisBottom(x));
-
+        .data([null])
+        .join('g')
+        .attr('class', 'x-axis')
+        .attr('fill','green')
+        .attr(
+          'transform',
+          `translate(0,${height - margin.bottom})`)
+        .transition(t)
+        .call(d3.axisBottom(x));
   };
 
   my.width = function (_) {

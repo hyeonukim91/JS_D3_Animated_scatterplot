@@ -6,6 +6,7 @@ const csvUrl = [
   'iris.csv', // File name
 ].join('');
 
+//strings to int
 const parseRow = (d) => {
   d.sepal_length = +d.sepal_length;
   d.sepal_width = +d.sepal_width;
@@ -14,22 +15,13 @@ const parseRow = (d) => {
   return d;
 };
 
-const width = 700;
-const height = 500 ;
-
-// const color = (d) => {
-//   if (d.species == 'setosa')
-//     return '#A7D2CB'
-//   else if (d.species == 'versicolor')
-//     return '#F2D388'
-//   else return '#874C62'
-// }
+const width = 650;
+const height = 450;
 
 const svg = d3.select('.plot')
   .append('svg')
   .attr('width', width)
   .attr('height', height)
-  .attr('color', '#06283D');
 
 const main = async () => {
   const plot = scatterPlot()
@@ -48,11 +40,12 @@ const main = async () => {
 
   svg.call(plot);
 
+//make an array for iteration
   const columns = [
     'petal_width',
     'sepal_width',
     'petal_length',
-    'sepal_length',
+    'sepal_length'
   ];
 
   let i = 0;
@@ -63,6 +56,5 @@ const main = async () => {
   }, 3000);
 
 };
-
 
 main();
