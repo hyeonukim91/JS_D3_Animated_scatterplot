@@ -7,11 +7,11 @@ text {
   font-size: 15px;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
-  color: #067A46;
+  color: #4FA095;
 }
 
 h1 {
-  color: white;
+  color: #F6F6C9;
   text-align: center;
   font-size: 24px;
   font-family: 'Montserrat', sans-serif;
@@ -19,7 +19,7 @@ h1 {
 
 .title {
   width: 650px;
-  background-color: #067A46;
+  background-color: #153462;
   padding: 20px;
   margin: auto;
   margin-top: 20px;
@@ -29,14 +29,14 @@ h1 {
   width: 650px;
   height: 450px;
   margin: auto;
-  background-color: #F8FFDB;
+  background-color: #F6F6C9;
   padding: 20px;
 }
 
 .x-axis{
-  color: #067A46;
+  color: #4FA095;
 }
 
 .y-axis{
-  color: #067A46;
+  color: #4FA095;
 }
