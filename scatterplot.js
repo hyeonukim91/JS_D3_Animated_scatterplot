@@ -18,10 +18,10 @@
 
     const icon = (d) => {
         if (d.species == 'setosa')
-          return 'images/carrot.svg'
+          return 'images/dolphin.svg'
         else if (d.species == 'versicolor')
-          return 'images/lemon.svg'
-        else return 'images/avocado.svg'
+          return 'images/whale.svg'
+        else return 'images/penguin.svg'
       };
 
     const marks = data.map((d) => ({
